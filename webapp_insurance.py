@@ -53,15 +53,19 @@ X1 = pd.get_dummies(X1)
 
 X =pd.get_dummies(X)
 
-from xgboost import XGBRegressor
-xgb1 = XGBRegressor(booster = "gbtree",tree_method="hist",learning_rate= 0.2,
- max_depth= 3,
- min_child_weight= 4,
- n_estimators= 100)
-xgb1.fit(X,y)
+# from xgboost import XGBRegressor
+# xgb1 = XGBRegressor(booster = "gbtree",tree_method="hist",learning_rate= 0.2,
+#  max_depth= 3,
+#  min_child_weight= 4,
+#  n_estimators= 100)
+# xgb1.fit(X,y)
+from sklearn.ensemble import RandomForestClassifier
+
+clf = RandomForestClassifier(n_estimators=150,criterion="mse",max_depth = None,
+                               max_features='log2',min_samples_split = 20, bootstrap=True)
+clf.fit(X,y)
 
 # Apply model to make predictions
-prediction = xgb1.predict(X1[:1])
-
+prediction = clf.predict(X1[:1])
 st.write(prediction)
 
