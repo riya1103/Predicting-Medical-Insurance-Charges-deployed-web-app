@@ -67,6 +67,5 @@ clf.fit(X,y)
 
 # Apply model to make predictions
 prediction = clf.predict(X1[:1])
-prediction1 = round(prediction,2)
-st.write(prediction1)
+st.write(prediction)
 
