@@ -25,7 +25,6 @@ import seaborn as sns
 
 df = pd.read_csv("insurance.csv")
 
-!pip install streamlit
 
 import pickle
 import streamlit as st
