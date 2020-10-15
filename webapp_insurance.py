@@ -53,7 +53,6 @@ X1 = pd.get_dummies(X1)
 
 X =pd.get_dummies(X)
 
-import xgboost
 from xgboost import XGBRegressor
 xgb1 = XGBRegressor(booster = "gbtree",tree_method="hist",learning_rate= 0.2,
  max_depth= 3,
