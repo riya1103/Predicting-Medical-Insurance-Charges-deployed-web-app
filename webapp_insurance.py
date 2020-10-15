@@ -59,9 +59,9 @@ X =pd.get_dummies(X)
 #  min_child_weight= 4,
 #  n_estimators= 100)
 # xgb1.fit(X,y)
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 
-clf = RandomForestClassifier(n_estimators=150,criterion="mse",max_depth = None,
+clf = RandomForestRegressor(n_estimators=150,criterion="mse",max_depth = None,
                                max_features='log2',min_samples_split = 20, bootstrap=True)
 clf.fit(X,y)
 
