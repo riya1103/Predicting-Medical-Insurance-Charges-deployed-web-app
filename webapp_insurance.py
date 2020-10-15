@@ -11,8 +11,6 @@ Original file is located at
 # For example, here's several helpful packages to load
 import pandas as pd
 import numpy as np
-import time
-import seaborn as sns
 
 df = pd.read_csv("insurance.csv")
 
