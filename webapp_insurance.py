@@ -43,7 +43,7 @@ else:
         df2 = pd.DataFrame(data,index=[0])
         return df2
     input_df = user_input_features()
-
+st.write("Built by : Riya Jain")
 X = df.drop(columns=['charges'])
 
 y = df['charges']
