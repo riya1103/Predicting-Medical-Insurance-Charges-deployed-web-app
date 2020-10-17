@@ -47,7 +47,6 @@ else:
 
 st.write("The cost of treatment depends on many factors: diagnosis, type of clinic, city of residence, age and so on.")
 st.write("This app will predict the insurance charges using a suite of features including demographics, activity level, vices of the person.") 
-st.write("Built by : Riya Jain")
 X = df.drop(columns=['charges'])
 
 y = df['charges']
@@ -72,4 +71,5 @@ clf.fit(X,y)
 # Apply model to make predictions
 prediction = clf.predict(X1[:1])
 st.write(prediction)
+st.subheader("Built by : Riya Jain")
 
