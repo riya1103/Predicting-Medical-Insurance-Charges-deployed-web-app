@@ -28,6 +28,7 @@ if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
 else:
     def user_input_features():
+        
         age = st.sidebar.slider("age",18,64,50)
         sex = st.sidebar.selectbox("sex",("male","female"))
         bmi = st.sidebar.slider("bmi",15.96,53.13,30.00)
@@ -43,6 +44,9 @@ else:
         df2 = pd.DataFrame(data,index=[0])
         return df2
     input_df = user_input_features()
+
+st.write("The cost of treatment depends on many factors: diagnosis, type of clinic, city of residence, age and so on.")
+st.write("This app will predict the insurance charges using a suite of features including demographics, activity level, vices of the person.") 
 st.write("Built by : Riya Jain")
 X = df.drop(columns=['charges'])
 
